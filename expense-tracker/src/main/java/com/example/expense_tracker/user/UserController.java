@@ -33,7 +33,7 @@ public class UserController {
     }
 
     @PutMapping("/users/{id}")
-    public ResponseEntity<User> updateUser(@Valid User user, @PathVariable int id) throws Exception {
+    public ResponseEntity<User> updateUser(@Valid User user, @PathVariable int id) {
         User updatedUser = userService.updateUser(id, user);
         return new ResponseEntity<>(updatedUser, HttpStatus.OK);
     }

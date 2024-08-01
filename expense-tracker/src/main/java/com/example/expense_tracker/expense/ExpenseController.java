@@ -23,20 +23,20 @@ public class ExpenseController {
     @GetMapping("/users/{id}/expenses")
     public ResponseEntity<List> retrieveUserExpenses(@PathVariable int id) {
         User user = userService.retrieveUserById(id);
-        return new ResponseEntity<List>(user.getExpenseList(), HttpStatus.OK);
+        return new ResponseEntity<>(user.getExpenseList(), HttpStatus.OK);
     }
 
     @PostMapping("/users/{id}/expenses")
     public ResponseEntity<List<Expense>> addExpense(@PathVariable int id, @Valid Expense expense) {
         List<Expense> createdExpense = expenseService.addExpense(id, expense);
-        return new ResponseEntity<List<Expense>>(createdExpense, HttpStatus.CREATED);
+        return new ResponseEntity<>(createdExpense, HttpStatus.CREATED);
     }
 
     @PutMapping("/users/{id}/expenses/{expenseId}")
     public ResponseEntity<Expense> updateExpense(@PathVariable int id, @PathVariable int expenseId,
                                                  @Valid Expense expense) throws Exception {
         Expense updatedExpense = expenseService.updateExpense(id, expenseId, expense);
-        return new ResponseEntity<Expense>(updatedExpense, HttpStatus.OK);
+        return new ResponseEntity<>(updatedExpense, HttpStatus.OK);
     }
 
     @DeleteMapping("/users/{id}/expenses/{expenseId}")

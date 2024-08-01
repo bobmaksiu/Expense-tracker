@@ -27,7 +27,7 @@ public class ExpenseService {
         User user = userService.retrieveUserById(id);
 
         if (user.getExpenseList() == null) {
-            user.setExpenseList(new ArrayList<Expense>());
+            user.setExpenseList(new ArrayList<>());
         }
 
         expense.setId(null);
@@ -41,7 +41,7 @@ public class ExpenseService {
         return user.getExpenseList();
     }
 
-    public Expense updateExpense(int id, int expenseId, Expense expense) throws Exception {
+    public Expense updateExpense(int id, int expenseId, Expense expense) {
         User user = userService.retrieveUserById(id);
 
         Expense expenseToUpdate = expenseRepository.findById(expenseId).orElseThrow(

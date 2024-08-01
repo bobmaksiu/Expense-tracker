@@ -25,7 +25,7 @@ public class User {
     public User(Integer id, String username) {
         this.id = id;
         this.username = username;
-        this.expenseList = new ArrayList<Expense>();
+        this.expenseList = new ArrayList<>();
     }
 
     public Integer getId() {
