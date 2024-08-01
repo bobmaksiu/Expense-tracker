@@ -37,29 +37,33 @@ Expense Tracker is a web application built using Spring Boot and Java, designed 
    git clone https://github.com/bobmaksiu/expense-tracker.git
    
 2. Navigate into the project directory:
-   
-  cd expense-tracker
-  
+
+   ```bash
+   cd expense-tracker
+   ```
 3. Install dependencies and build the project:
 
-For Maven:
+   For Maven:
+   
+     ```bash
+     mvn install
+     ```
+   For Gradle:
+   
+     ```bash
+     gradle build
+     ```
+5. Run the application:
 
-  mvn install
-  
-For Gradle:
-
-  gradle build
-  
-4. Run the application:
-
-For Maven:
-
-  mvn spring-boot:run
-  
-For Gradle:
-
-  gradle bootRun
-  
+    For Maven:
+       
+       mvn spring-boot:run
+   
+    For Gradle:
+   
+      ```bash
+      gradle bootRun
+      ```
 The application will be running on http://localhost:8080.
 
 ## API Endpoints
