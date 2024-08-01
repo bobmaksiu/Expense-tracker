@@ -34,7 +34,7 @@ Expense Tracker is a web application built using Spring Boot and Java, designed 
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/yourusername/expense-tracker.git
+   git clone https://github.com/bobmaksiu/expense-tracker.git
    
 2. Navigate into the project directory:
    
